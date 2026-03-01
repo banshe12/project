@@ -9,7 +9,52 @@ class UtilityBrain:
         if not os.path.exists(cards_file):
             return {}
         with open(cards_file, 'r') as f:
-            return json.load(f)
+            data = json.load(f)
+
+        # RoyaleAPI returns a list, we need a dict
+        if isinstance(data, list):
+            return self._map_royale_api_data(data)
+        return data
+
+    def _map_royale_api_data(self, data):
+        """
+        Maps RoyaleAPI list data to the internal dictionary format.
+        Adds traits and targets based on card names/types.
+        """
+        mapped = {}
+        for card in data:
+            name = card.get('name')
+            elixir = card.get('elixir', 0)
+            c_type = card.get('type', 'Troop').lower()
+
+            # Basic mapping
+            target = 'ground'
+            traits = []
+
+            if 'Air' in card.get('type', ''):
+                target = 'ground_air'
+
+            # Heuristic trait mapping for key cards
+            if name in ["Goblin Gang", "Minion Horde", "Minions", "Skeleton Army"]:
+                traits.append("swarm")
+            if name in ["Dark Prince", "Witch", "Baby Dragon", "Wizard", "Valkyrie", "Fireball"]:
+                traits.append("splash")
+                target = 'ground_air' if name != "Valkyrie" else 'ground'
+            if name in ["Hog Rider", "Giant", "Golem", "Ram Rider"]:
+                target = 'buildings'
+                if name == "Golem": traits.append("tank")
+            if name in ["Prince", "P.E.K.K.A", "Mini P.E.K.K.A", "Musketeer"]:
+                traits.append("high_dps")
+            if name in ["Giant", "P.E.K.K.A", "Golem"]:
+                traits.append("tank")
+
+            mapped[name] = {
+                "cost": elixir,
+                "type": "building" if c_type == "building" else ("spell" if c_type == "spell" else "ground"),
+                "target": target,
+                "traits": traits
+            }
+        return mapped
 
     def _calculate_score(self, card_name, threat_name):
         if card_name not in self.cards or threat_name not in self.cards:

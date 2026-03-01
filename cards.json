@@ -1,0 +1,74 @@
+{
+  "Hog Rider": {
+    "cost": 4,
+    "type": "ground",
+    "target": "buildings",
+    "traits": ["high_dps"]
+  },
+  "Goblin Gang": {
+    "cost": 3,
+    "type": "ground",
+    "target": "ground_air",
+    "traits": ["swarm"]
+  },
+  "Dark Prince": {
+    "cost": 4,
+    "type": "ground",
+    "target": "ground",
+    "traits": ["splash"]
+  },
+  "Witch": {
+    "cost": 5,
+    "type": "ground",
+    "target": "ground_air",
+    "traits": ["splash"]
+  },
+  "Prince": {
+    "cost": 5,
+    "type": "ground",
+    "target": "ground",
+    "traits": ["high_dps"]
+  },
+  "Baby Dragon": {
+    "cost": 4,
+    "type": "air",
+    "target": "ground_air",
+    "traits": ["splash"]
+  },
+  "Minions": {
+    "cost": 3,
+    "type": "air",
+    "target": "ground_air",
+    "traits": ["swarm"]
+  },
+  "Fireball": {
+    "cost": 4,
+    "type": "spell",
+    "target": "ground_air",
+    "traits": ["splash"]
+  },
+  "Cannon": {
+    "cost": 3,
+    "type": "building",
+    "target": "ground",
+    "traits": ["high_dps"]
+  },
+  "Musketeer": {
+    "cost": 4,
+    "type": "ground",
+    "target": "ground_air",
+    "traits": ["high_dps"]
+  },
+  "P.E.K.K.A": {
+    "cost": 7,
+    "type": "ground",
+    "target": "ground",
+    "traits": ["tank", "high_dps"]
+  },
+  "Giant": {
+    "cost": 5,
+    "type": "ground",
+    "target": "buildings",
+    "traits": ["tank"]
+  }
+}

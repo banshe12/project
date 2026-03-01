@@ -1,0 +1,62 @@
+{
+  "Hog Rider": {
+    "cost": 4,
+    "type": "ground",
+    "target": ["buildings"],
+    "traits": ["tank"]
+  },
+  "Goblin Gang": {
+    "cost": 3,
+    "type": "ground",
+    "target": ["ground", "air"],
+    "traits": ["swarm"]
+  },
+  "Dark Prince": {
+    "cost": 4,
+    "type": "ground",
+    "target": ["ground"],
+    "traits": ["splash"]
+  },
+  "Witch": {
+    "cost": 5,
+    "type": "ground",
+    "target": ["ground", "air"],
+    "traits": ["splash"]
+  },
+  "Musketeer": {
+    "cost": 4,
+    "type": "ground",
+    "target": ["ground", "air"],
+    "traits": ["high_dps"]
+  },
+  "Baby Dragon": {
+    "cost": 4,
+    "type": "air",
+    "target": ["ground", "air"],
+    "traits": ["splash"]
+  },
+  "Knight": {
+    "cost": 3,
+    "type": "ground",
+    "target": ["ground"],
+    "traits": ["tank"]
+  },
+  "Skeleton Army": {
+    "cost": 3,
+    "type": "ground",
+    "target": ["ground"],
+    "traits": ["swarm"]
+  },
+  "Minions": {
+    "cost": 3,
+    "type": "air",
+    "target": ["ground", "air"],
+    "traits": ["swarm"]
+  },
+  "Fireball": {
+    "cost": 4,
+    "type": "spell",
+    "target": ["ground", "air"],
+    "traits": ["splash"]
+  }
+}

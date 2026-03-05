@@ -1,0 +1,7 @@
+pymem
+PyQt6
+pydirectinput
+python-telegram-bot
+pyautogui
+opencv-python
+qasync

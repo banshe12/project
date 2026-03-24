@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LAGGER v1.0"
+        android:textColor="@color/neon_green"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:layout_marginBottom="48dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="@color/gray_dark"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/btn_start_vpn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="ACTIVATE CORE"
+                android:background="@drawable/button_primary"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.Material3.Button"/>
+
+            <Button
+                android:id="@+id/btn_stop_all"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="TERMINATE"
+                android:backgroundTint="@color/neon_red"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                style="@style/Widget.Material3.Button.TonalButton"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NETWORK MANIPULATION PROTOCOL"
+        android:textColor="@color/gray_light"
+        android:textSize="10sp"
+        android:letterSpacing="0.2"/>
+
+</LinearLayout>
